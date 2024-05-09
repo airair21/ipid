@@ -269,6 +269,7 @@ video {
 .id {
     background-color: orangered;
     width: 50vw;
+    height: auto;
     border-radius: 10%;
     /* font-size: 2vw; */
     display: flex;
@@ -304,7 +305,7 @@ video {
 }
 #ip {
     font-family: "Libre Barcode 128 Text", system-ui;
-    font-size: 100%;
+    font-size: 80%;
     /* width: fit-content; */
 }
 .information {
