@@ -1,0 +1,198 @@
+body {
+    font-size: 6vw;
+    /* color: cadetblue; */
+    /* font-family: cursive; */
+
+    /* font-family: "Jacquarda Bastarda 9", serif; */
+    /* font-family: "Sunshiney", cursive; */
+
+    font-family: sloop-script-two, sans-serif;
+
+}
+
+/* video {
+    /* width: 100px; */
+    /* height: 1000px  !important; */
+/*} */
+.camera {
+    width: 40%;
+    height: 40% !important;
+}
+button {
+    font-size: 3vh;
+    /* padding: 45%; */
+    margin: 4vh;
+    font-family: "the-seasons", sans-serif;
+    border-radius: 0%;
+    animation: orange 200s;
+}
+
+#player {
+    /* width: auto;
+    height: 5%; */
+    border-radius: 25px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: rgb(225, 225, 225);
+    text-align: center;
+    object-fit: cover;
+    grid-row-start: 1;
+    /* align-items: center; */
+}
+
+#canvas {
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 0px;
+    height: 100px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    flex-direction: column;
+    width: 80vw;
+    overflow: visible;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+
+#pack_cont{
+    /* width: 900px;
+    height: 1200px;
+    overflow-y:scroll;
+    margin: 50px auto; 
+    padding: 50px 140px;
+    background-color: green;
+    border: 20px solid rgb(55, 27, 27);
+    border-radius: 30px; */
+
+    width: 75vw;
+    height: 30vh;
+
+
+    /* background-color: green; */
+}
+    
+    /*single card*/
+.card{
+    width: 100px;
+    height: 140px;
+    border: 3.3px solid #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    background-color: black;
+    background-image: url('back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    text-align: center;
+    
+    /*all transition to take 1s */
+    transition:all 1s;
+    -ms-transition:all 1s;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    
+    /*set card transform origin to 20% from x-axis and 80% from y-axis */
+    transform-origin: 20% 80%;
+    -ms-transform-origin: 20% 80%;
+    -webikit-transform-origin: 20% 80%;
+    -moz-transform-origin: 20% 80%;
+    
+    /*make card non selectable*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+    
+    /*red colored card*/
+.card.red{
+    color:black;
+}
+    
+    /*
+    while opening a card, again shift transform origin 
+    to vertical and horizontal center axis 
+    to give an actual flip effect
+    */
+.card.open{
+    transform-origin: center center !important;
+    -ms-transform-origin: center center !important;
+    -webikit-transform-origin: center center !important;
+    -moz-transform-origin: center center !important;
+    -webkit-transform: rotateY(180deg) !important;
+    transform:  rotateY( 180deg ) !important;
+}
+    
+    /*to show card value */
+    /*rotate the text to 180deg so the text is not mirrored when card is flipped*/
+    /* opened card text*/
+.card.opened span:after{
+    content:attr(data-title);
+    transform: rotateY( 180deg );
+    font-size: 40px;
+    display: block;
+}
+    
+    /*hide background from open card */
+.card.opened{	
+    background-image: none;
+}
+    
+    
+    
+button{
+   cursor: pointer;
+}
+
+
+/* .cont{
+    display: grid;
+    place-items: center;
+    width: 75vw;
+    font-size: 70%;
+  }
+  
+  .typed {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 0;
+    animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
+  } */
+
+  .cont {
+  display: inline-block;
+  /* font-size: 1.6rem; */
+  
+  font-size: 70%;
+  /* overflow: hidden; */
+  white-space: nowrap;
+}
+
+.typed {
+  overflow: hidden;
+  border-right: 2px solid orangered;
+  white-space: nowrap;
+  animation: typing 2.5s steps(50, end) forwards, blinking 1s infinite;
+  width: 100%;
+}
+    
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blinking {
+    0% {border-color: transparent}
+    50% {border-color: orangered}
+    100% {border-color: transparent}
+  }
+  

@@ -1,0 +1,363 @@
+body {
+    font-size: 6vw;
+    /* color: cadetblue; */
+    /* font-family: cursive; */
+
+    /* font-family: "Jacquarda Bastarda 9", serif; */
+    /* font-family: "Sunshiney", cursive; */
+
+    font-family: sloop-script-two, sans-serif;
+
+}
+#cardsbody {
+    animation: orange 90s;
+}
+@keyframes orange {
+    0% {
+        background-color: white;
+    }    
+    100% {
+        background-color: orangered;
+    }
+}
+p {
+    font-size: 3vh;
+}
+li {
+    font-size: 3vh;
+    font-family: monospace;
+    color: brown;
+}
+
+button {
+    font-size: 3vh;
+    /* padding: 45%; */
+    margin: 14vh;
+    font-family: "the-seasons", sans-serif;
+    border-radius: 0%;
+    animation: orange 200s;
+}
+
+.deck {
+    display: flex;
+    direction: row;
+
+    font-size: 3vw;
+    flex-wrap: wrap;
+    /* font-family: monospace; */
+    color: red;
+
+    /* font-family: "Yuji Syuku", serif; */
+    /* font-family: "Cutive Mono", monospace; */
+    /* font-family: "Courier Prime", monospace; */
+    /* font-family: "DM Mono", monospace;
+        font-weight: 500; */
+    font-family: "miller-banner-compressed", sans-serif;
+        font-weight: 300;
+
+    width: 90vw;
+
+    /* padding-top: 0; */
+}
+
+.card {
+    /* background-color: brown; */
+    margin: 5vh; 
+    /* padding: 2vh; */
+    border-radius: 10vw;
+    width: 20vw;
+    height: 25vh;
+
+    perspective: 1000px;
+    /* background-color: blue; */
+
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;    
+    align-items: center;
+    /* padding: 10%; */
+    flex-grow: 3;
+
+    animation: 1.5s ease 0s slide-and-fade-in;
+    animation-fill-mode: forwards;
+    position: relative;
+    opacity: 0;
+}
+@keyframes slide-and-fade-in {
+    0% {
+      top: -520px;
+      opacity: 0;
+    }
+  
+    100% {
+      top: 100px;
+      opacity: 1.0;
+    }
+}
+    .card:nth-child(2) {
+        animation-delay: .5s;
+    }  
+    .card:nth-child(3) {
+        animation-delay: 1s;
+    }
+    .card:nth-child(4) {
+        animation-delay: 1.5s;
+    }
+    .card:nth-child(5) {
+        animation-delay: 2s;
+    }
+    .card:nth-child(6) {
+        animation-delay: 2.5s;
+    }
+    .card:nth-child(7) {
+        animation-delay: 3s;
+    }
+    
+
+/* This container is needed to position the front and back side */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* transition: transform 0.8s; */
+    transform-style: preserve-3d;
+
+    background-color: greenyellow;
+}
+.card-front {
+    /* background-color: black; */
+    background-image: url('back-side.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3.3px solid #ffffff;
+    border-radius: 10px;
+    /* animation: flip; */
+    /* animation-duration: 2s; */
+}
+/* .card-back {
+    background-color: greenyellow;
+    /* color: white; */
+    /* transform: rotateY(180deg); */ /*
+    animation: flip;
+    animation-duration: 2s;
+} */
+
+.card:hover .card-inner {
+    /* transform: rotateY(180deg); */
+    animation: flip;
+    animation-duration: 2s;
+}
+  
+  /* Position the front and back side */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+
+
+
+
+/* #country{
+    animation: flip;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+#weather{
+    animation: flip;
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+#city{
+    animation: flip;
+    animation-duration: 2s;
+    animation-delay: 3s;
+}
+#district{
+    animation: flip;
+    animation-duration: 2s;
+    animation-delay: 4s;
+}
+#zip{
+    animation: flip;
+    animation-duration: 2s;
+    animation-delay: 5s;
+}
+#coords{
+    animation: flip;
+    animation-duration: 2s;
+    animation-delay: 6s;
+} */
+
+@keyframes flip {
+    0%{
+        transform: rotateY(00deg);
+    } 
+    100% {
+        transform: rotateY(180deg);
+    }
+} 
+/* 
+@keyframes gone {
+    0% {
+        opacity: 100%;
+    }
+    98% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+} */
+
+
+
+
+
+video {
+    /* width: 100px; */
+    /* height: 1000px  !important; */
+}
+.camera {
+    width: 40%;
+    height: 40% !important;
+}
+
+#player {
+    /* width: auto;
+    height: 5%; */
+    border-radius: 25px; 
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* position: relative; */
+    background-color: rgb(225, 225, 225);
+    text-align: center;
+    object-fit: cover;
+    /* grid-row-start: 1; */
+    /* align-items: center; */
+}
+
+#canvas {
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 0px;
+    height: 100px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    flex-direction: column;
+    width: 80vw;
+    overflow: visible;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+/* ID */
+.flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.id {
+    background-color: orangered;
+    width: 50vw;
+    border-radius: 10%;
+    /* font-size: 2vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* align-self: center; */
+
+    margin: 3vh;
+    padding: 2vw;
+    /* flex-grow: 3; */
+}
+#container {
+    width: 100%;
+    /* height: 100%; */
+    /* width: auto; */
+    /* height: 70% !important;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh;
+}
+#userPhoto {
+    width: 30vw !important;
+    height: auto !important;
+    /* height: 30vh; */
+    margin: 3vh;
+}
+#info {
+    font-size: 1.5vw;
+    font-family: "miller-banner-compressed", sans-serif;
+    font-weight: 300;
+}
+#ip {
+    font-family: "Libre Barcode 128 Text", system-ui;
+    font-size: 100%;
+    /* width: fit-content; */
+}
+.information {
+    font-family: "the-seasons", sans-serif;
+}
+.api {
+    font-size: 220%;
+}
+.one {
+    flex-grow: 5;
+}
+.sideside {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexID {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#photo-talk {
+    width: 10%;
+}
+
+.cont {
+    display: inline-block;
+    /* font-size: 1.6rem; */
+    
+    font-size: 70%;
+    /* overflow: hidden; */
+    white-space: nowrap;
+
+  }
+  
+  .typed {
+    overflow: hidden;
+    border-right: 2px solid orangered;
+    white-space: nowrap;
+    animation: typing 2.5s steps(50, end) forwards, blinking 1s infinite;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+      
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blinking {
+      0% {border-color: transparent}
+      50% {border-color: orangered}
+      100% {border-color: transparent}
+    }
